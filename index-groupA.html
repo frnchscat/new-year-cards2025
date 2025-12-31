@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year Message - Group A</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-image: url('https://i.postimg.cc/YourImageID.jpg'); /* replace with your direct image link */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      padding: 20px 0;
+      display: block;
+    }
+    .card {
+      background: rgba(255,255,255,0.5);
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      margin: 40px auto;
+      text-align: center;
+      box-sizing: border-box;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* subtle glow/shadow */
+    }
+    .top-text {
+      font-size: 18px;
+      color: #444343;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    .random-message {
+      font-size: 20px;
+      font-weight: bold;
+      color: #054EBB;
+      margin-bottom: 15px;
+    }
+    .footer {
+      font-size: 18px;
+      color: #444343;
+    }
+    .footer .france {
+      color: #F7470E;
+    }
+    .btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 25px;
+      border: 1px solid #444343;
+      color: #444343;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top-text">Before the year ends, I just thought you should know that...</div>
+    <div class="random-message" id="random-msg"></div>
+    <div class="footer">with love, <span class="france">France 🤍</span></div>
+    <a class="btn" href="#" onclick="pickMessage()">Scan again</a>
+  </div>
+
+  <script>
+    const messages = [
+      "Even from afar, your friendship brings a little warmth to my life—thank you.",
+      "Even if it’s seldom, your presence in my life is something I value—thank you.",
+      "Even in silence, I’m grateful for having you as a friend.",
+      "I appreciate you more than I express.",
+      "I carry our friendship with me wherever I go.",
+      "I don’t say it enough, but I truly appreciate knowing you.",
+      "I hope next year brings us more shared meals, random plans, and unplanned talks.",
+      "I hope next year gives us more time in the same room again.",
+      "I hope next year gives us more time together, more laughs, and more shared moments.",
+      "I hope next year we get to hang out like we always say we will. HAHAHA",
+      "I hope next year we get to see each other more, even in the simplest ways.",
+      "I may not check in much, but I appreciate all the ways you matter to me.",
+      "I may not reach out often, but I never forget to be thankful for you.",
+      "I may not say it often, but I’m grateful for all the ways you’ve supported me.",
+      "I’m thankful for every version of us that has existed so far.",
+      "No matter where life pulls us, you’ll always be someone I care deeply about.",
+      "Our friendship may be quiet, but it’s meaningful to me—thank you.",
+      "Rare as our chats are, I’m truly thankful for having you around.",
+      "Thank you for being a friend, even when our conversations are rare.",
+      "Thank you for being a safe place for me. Your presence alone already makes things lighter.",
+      "Thank you for being part of my life in your quiet, steady way.",
+      "Thank you for laughing with me when we definitely shouldn’t have.",
+      "Thank you for still being a friend, even when life gets busy.",
+      "Thank you for your friendship, even from a distance.",
+      "Time and distance don’t change my gratitude for having you as a friend.",
+      "Time may keep us apart, but I’m grateful for our connection.",
+      "We’ve survived enough chaos together that this friendship is basically canon.",
+      "You matter to me more than I probably say out loud, but I hope you feel it.",
+      "You’re one of the people I silently thank the universe for."
+    ];
+
+    function pickMessage() {
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('random-msg').innerText = randomMessage;
+    }
+
+    // Pick a message on load
+    pickMessage();
+  </script>
+</body>
+</html>
